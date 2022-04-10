@@ -408,7 +408,7 @@ body > div > section.head > div.hero > div > a:hover::before{
 }
 .explore_container_card:hover::before{
   content: "";
-  border-radius: var(--btnradius);
+  border-radius: 7px;
   transition: 0.5s;
   background:#374991a4;
   width: 100%;
