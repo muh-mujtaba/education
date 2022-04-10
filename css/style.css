@@ -512,10 +512,15 @@ body > div > section.head > div.hero > div > a:hover::before{
 .community_container > div {
   width: 30%;
   padding: 15px;
+  margin: 3px;
+  border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.community_container > div:hover{
+  box-shadow: rgb(170 170 170) 0px 0px 3px;
 }
 .community_container > div h4 {
   margin-top: 10px;
