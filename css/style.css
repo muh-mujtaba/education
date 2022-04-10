@@ -247,6 +247,9 @@ body > div > section.head > div.hero > div > a:hover::before{
   margin: 15px 5px;
   border-radius: var(--btnradius);
 }
+.featured_card_inside:hover{
+  width: 26%;
+}
 .featured_card_inside > div > i {
   color: var(--starcolor);
 }
