@@ -205,6 +205,9 @@ body > div > section.head > div.hero > div > a:hover::before{
   align-items: center;
   flex-direction: row;
 }
+/* .services_card:hover{
+  box-shadow: rgb(170 170 170) 0px 0px 3px;
+} */
 .services_card_course h4 {
   color: var(--fontcolorbl);
 }
@@ -248,7 +251,9 @@ body > div > section.head > div.hero > div > a:hover::before{
   border-radius: var(--btnradius);
 }
 .featured_card_inside:hover{
-  width: 26%;
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(0.5); /* Safari 3-8 */
+  transform: scale(1.09);
 }
 .featured_card_inside > div > i {
   color: var(--starcolor);
