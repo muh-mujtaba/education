@@ -33,6 +33,7 @@
   align-items: center;
   padding: 15px;
   position: fixed;
+  z-index: 30;
 }
 .bars {
   display: none;
@@ -107,6 +108,7 @@
   background-color: var(--btnhover);
   transition: all 0.3s linear;
   color: white;
+  z-index: 30;
 }
 .right_navbar ul li a:hover::before{
   content: "";
@@ -119,6 +121,7 @@
   border-radius: var(--btnradius);
   background-color: var(--btnhover);
   color: white;
+  z-index: 30;
 }
 .hero {
   background-image: var(--bgimg);
