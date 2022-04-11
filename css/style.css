@@ -83,7 +83,8 @@
 }
 .right_navbar ul li {
   list-style: none;
-  font-size: var(--fontsize);
+  padding: 5px;
+  /* font-size: var(--fontsize);
   background-color: var(--btn);
   border-radius: var(--btnradius);
   margin-left: 5px;
@@ -91,13 +92,48 @@
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  position: relative;
+  position: relative; */
 }
-.right_navbar ul li a {
+/* .right_navbar ul li a {
   text-decoration: none;
   color: var(--fontcolor);
+} */
+.css-button-sliding-to-left--black {
+  min-width: 110px;
+  height: 35px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: var(--btnradius);
+  z-index: 0;
+  background: var(--starcolor);
+  overflow: hidden;
+  border: transparent;
+  color: white;
 }
-.right_navbar ul li a::before {
+.css-button-sliding-to-left--black:hover {
+  color: #fff;
+}
+.css-button-sliding-to-left--black:hover:after {
+  width: 100%;
+}
+.css-button-sliding-to-left--black:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: var(--btnhover);
+}
+/* #join::before {
   content: "";
   position: absolute;
   width: 0%;
@@ -108,10 +144,41 @@
   background-color: var(--btnhover);
   transition: all 0.3s linear;
   color: white;
-  z-index: 30;
 }
-.right_navbar ul li a:hover::before{
+#join:hover::before{
   content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s linear;
+  border-radius: var(--btnradius);
+  background-color: var(--btnhover);
+  color: white !important;
+}
+#login::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--btnradius);
+  background-color: var(--btnhover);
+  transition: all 0.3s linear;
+  color: white;
+}
+#login:hover::before{
+  content: "LogIn";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -121,8 +188,7 @@
   border-radius: var(--btnradius);
   background-color: var(--btnhover);
   color: white;
-  z-index: 30;
-}
+} */
 .hero {
   background-image: var(--bgimg);
   background-size: cover;
@@ -154,16 +220,22 @@
 }
 .hero_inside a {
   text-decoration: none;
-  color: var(--fontcolor);
+  /* color: var(--fontcolor);
   background-color: var(--btn);
-  padding: var(--padding);
   font-size: 16px;
   border-radius: var(--btnradius);
-  padding: 7px 25px;
+  padding: 7px 25px; */
+  padding: var(--padding);
   margin-bottom: 125px;
-  position: relative;
 }
-body > div > section.head > div.hero > div > a::before {
+.hero_inside a button{
+  padding: 11px 29px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* body > div > section.head > div.hero > div > a::before {
   content: "";
   position: absolute;
   width: 0%;
@@ -176,8 +248,12 @@ body > div > section.head > div.hero > div > a::before {
   color: white;
 }
 body > div > section.head > div.hero > div > a:hover::before{
-  content: "";
+  content: "Join For Free";
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
   width: 100%;
   height: 100%;
   top: 0;
@@ -186,7 +262,7 @@ body > div > section.head > div.hero > div > a:hover::before{
   border-radius: var(--btnradius);
   background-color: var(--btnhover);
   color: white;
-}
+} */
 .services_container {
   width: 100%;
 }
@@ -299,15 +375,52 @@ body > div > section.head > div.hero > div > a:hover::before{
   align-items: center;
 }
 .featured_card_inside_btn a {
-  text-decoration: none;
+  width: 100%;
+  /* text-decoration: none;
   color: var(--fontcolorbl);
   border: 1px solid var(--fontcolorlight);
   padding: 10px 55px;
   font-size: 14px;
   border-radius: var(--btnradius);
-  position: relative;
+  position: relative; */
 }
-.featured_card_inside_btn a::before {
+.css-button-sliding-to-bottom--black {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  width: 100%;
+  /* padding: 5px 80px; */
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid var(--fontcolorlight);
+  color: var(--fontcolorbl);
+}
+.css-button-sliding-to-bottom--black:hover {
+  color: #fff;
+}
+.css-button-sliding-to-bottom--black:hover:after {
+  height: 100%;
+}
+.css-button-sliding-to-bottom--black:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  background: var(--starcolor);
+}
+/* .featured_card_inside_btn a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -320,8 +433,12 @@ body > div > section.head > div.hero > div > a:hover::before{
   color: white;
 }
 .featured_card_inside_btn a:hover::before{
-  content: "";
+  content: "Find Out More";
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
   width: 100%;
   height: 100%;
   top: 0;
@@ -330,7 +447,7 @@ body > div > section.head > div.hero > div > a:hover::before{
   border-radius: var(--btnradius);
   background-color: var(--starcolor);
   color: white;
-}
+} */
 .skills {
   width: 100%;
   margin-top: 35px;
@@ -408,7 +525,7 @@ body > div > section.head > div.hero > div > a:hover::before{
 }
 .explore_container_card {
   width: 20%;
-  margin: 75px 5px;
+  margin: 6px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,6 +546,7 @@ body > div > section.head > div.hero > div > a:hover::before{
   position: absolute;
 }
 .explore_container_card a {
+  margin-top: 6px;
   position: absolute;
   text-decoration: none;
   font-size: 22px;
@@ -440,15 +558,47 @@ body > div > section.head > div.hero > div > a:hover::before{
   border-bottom: 2px solid white;
 }
 .explore > a {
+  margin-top: 50px;
   text-decoration: none;
+}
+.explore > a .css-button-sliding-to-bottom--black {
   color: var(--starcolor);
   border: 1px solid var(--starcolor);
   padding: 10px 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   border-radius: var(--btnradius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
   position: relative;
+  display: inline-block;
+  outline: none;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  color: var(--starcolor);
 }
-.explore > a::before {
+.explore > a .css-button-sliding-to-bottom--black:hover {
+  color: #fff;
+}
+.explore > a .css-button-sliding-to-bottom--black:hover:after {
+  height: 100%;
+}
+.explore > a .css-button-sliding-to-bottom--black:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  background: var(--starcolor);
+}
+/* .explore > a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -461,7 +611,11 @@ body > div > section.head > div.hero > div > a:hover::before{
   color: white;
 }
 .explore > a:hover::before{
-  content: "";
+  content: "View More Subjects";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -471,7 +625,7 @@ body > div > section.head > div.hero > div > a:hover::before{
   border-radius: var(--btnradius);
   background-color: var(--starcolor);
   color: white;
-}
+} */
 .outcomes {
   width: 100%;
   margin-top: 25px;
@@ -580,15 +734,52 @@ body > div > section.head > div.hero > div > a:hover::before{
 }
 .join_right a {
   margin-top: 25px;
-  text-decoration: none;
+  /* text-decoration: none;
   color: var(--starcolor);
   border: 1px solid var(--starcolor);
   padding: 10px 55px;
   font-size: 14px;
   border-radius: var(--btnradius);
-  position: relative;
+  position: relative; */
 }
-.join_right a::before {
+.join_right a .css-button-sliding-to-bottom--black {
+  color: var(--starcolor);
+  border: 1px solid var(--starcolor);
+  padding: 10px 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: var(--btnradius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  color: var(--starcolor);
+}
+.join_right a .css-button-sliding-to-bottom--black:hover {
+  color: #fff;
+}
+.join_right a .css-button-sliding-to-bottom--black:hover:after {
+  height: 100%;
+}
+.join_right a .css-button-sliding-to-bottom--black:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  background: var(--starcolor);
+}
+/* .join_right a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -601,8 +792,12 @@ body > div > section.head > div.hero > div > a:hover::before{
   color: white;
 }
 .join_right a:hover::before{
-  content: "";
+  content: "Join Now For Free";
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
   width: 100%;
   height: 100%;
   top: 0;
@@ -611,7 +806,7 @@ body > div > section.head > div.hero > div > a:hover::before{
   border-radius: var(--btnradius);
   background-color: var(--starcolor);
   color: white;
-}
+} */
 
 .footer {
   width: 100%;
@@ -692,7 +887,7 @@ body > div > section.head > div.hero > div > a:hover::before{
 }
 .login {
   width: 60%;
-  height: 90vh;
+  height: 90%;
   border-radius: var(--btnradius);
   display: flex;
   justify-content: space-between;
@@ -715,7 +910,7 @@ body > div > section.head > div.hero > div > a:hover::before{
 }
 .login form input {
   width: 80%;
-  height: 6vh;
+  padding: 5px ;
   margin: 10px 0px;
   font-size: 16px;
   color: white;
@@ -729,13 +924,46 @@ body > div > section.head > div.hero > div > a:hover::before{
 ::placeholder {
   color: white;
 }
-.login form input[type="submit"] {
+#submit {
   margin-top: 40px;
   background-color: white;
   color: black;
   width: 40%;
   border: 1px solid transparent;
   border-radius: var(--btnradius);
+  position: relative;
+}
+#submit:hover{
+  cursor: pointer;
+}
+#submit::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--btnradius);
+  background-color: var(--btnhover);
+  transition: all 0.3s linear;
+  color: white;
+}
+#submit:hover::before{
+  cursor: pointer;
+  content: "Submit";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s linear;
+  border-radius: var(--btnradius);
+  background-color: var(--btnhover);
+  color: white;
 }
 .login_links {
   display: flex;
@@ -846,6 +1074,9 @@ color: var(--fontcolorbl);
   align-items: flex-start;
   flex-direction: column;
 }
+.left_contact_data form a{
+  margin-top: 15px;
+}
 .left_contact_data form textarea::placeholder{
     color: black;
 }
@@ -864,19 +1095,6 @@ font-size: 16px;
 display: flex;
 justify-content: center;
 align-items: center;
-}
-.left_contact_data form input[type="submit"]{
-    width: 30%;
-    padding: 15px;
-    font-size: 18px;
-    background-color: transparent;
-    border: 1px solid var(--btnhover);
-    color: var(--btnhover);
-}
-.left_contact_data form input[type="submit"]:hover{
-    background-color: var(--btnhover);
-    color: white;
-    transition: 0.3s;
 }
 .left_contact_data_user{
     display: flex;
